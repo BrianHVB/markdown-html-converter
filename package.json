@@ -1,0 +1,24 @@
+{
+  "name": "markdown-html-converter",
+  "version": "1.0.0",
+  "description": "Converts markdown to HTML with specific customizations for the CodeColorer Wordpress plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianHVB/markdown-html-converter.git"
+  },
+  "keywords": [
+    "markdown",
+    "WordPress",
+    "CodeColorer"
+  ],
+  "author": "Brian Houle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianHVB/markdown-html-converter/issues"
+  },
+  "homepage": "https://github.com/BrianHVB/markdown-html-converter#readme"
+}
