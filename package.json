@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/BrianHVB/markdown-html-converter/issues"
   },
-  "homepage": "https://github.com/BrianHVB/markdown-html-converter#readme"
+  "homepage": "https://github.com/BrianHVB/markdown-html-converter#readme",
+  "dependencies": {
+    "marked": "^0.6.0"
+  }
 }
