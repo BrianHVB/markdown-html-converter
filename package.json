@@ -2,7 +2,7 @@
   "name": "markdown-html-converter",
   "version": "1.0.0",
   "description": "Converts markdown to HTML with specific customizations for the CodeColorer Wordpress plugin",
-  "main": "index.js",
+  "main": "convert-markdown.js",
   "scripts": {
     "test": "test"
   },
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/BrianHVB/markdown-html-converter#readme",
   "dependencies": {
+    "markdown-it": "^8.4.2",
     "marked": "^0.6.0"
   }
 }
