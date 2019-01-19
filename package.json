@@ -23,6 +23,8 @@
   "homepage": "https://github.com/BrianHVB/markdown-html-converter#readme",
   "dependencies": {
     "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-toc-done-right": "^2.0.3",
     "marked": "^0.6.0"
   }
 }

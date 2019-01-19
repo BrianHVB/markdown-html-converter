@@ -1,0 +1,61 @@
+<h1>Do some coding thing</h1>
+<p>This is a test entry in some fancy markdown.</p>
+<p>Logo and Google Link:<br>
+<a href="httos://google.com"><img src="https://blog.echogy.net/wp-content/uploads/2018/03/1200px-React-icon.svg1_-440x440.png" alt="React Logo"></a></p>
+<h2>Table of Contents</h2>
+<p>${toc}</p>
+<h2>Introduction</h2>
+<p>This is a <em>test</em> document for converting markdown to html. Hopefully it will turn into something that let me write blog entries in <strong>markdown</strong> for both my <a href="https://blog.echogy.net">Echogy blog</a> and <a href="https://www.medium.com">Medium</a></p>
+<h2>Whitespace</h2>
+<p>Because Markdown uses HTML style whitespace rules, it is more difficult than it should be to get multiple blank lines between paragraphs. The best way seems to be to add <code>&amp;nbsp;</code> entries to any blank lines. Using this,<br>
+ <br>
+ <br>
+You can skip (2) or more lines.</p>
+<h2>Escaped HTML</h2>
+<p>Here are some HTML tags entered as text blocks. Depending on your settings they may need to be escaped. The following paragraph should contain text representations of the p, a, img, and div tags.</p>
+<h3>Example 1:</h3>
+<p>A &lt;p&gt; tag is for paragrapms and line spacing, while an &lt;a&gt; tag can be used within an &lt;img&gt;, and &lt;div&gt; tags are for everything:</p>
+<ul>
+<li>A &lt;p&gt; tag:</li>
+<li>An &lt;a&gt; tag with an &lt;img&gt; tag.</li>
+<li>Good ol' catchall: &lt;div&gt;</li>
+</ul>
+<h3>Example 2:</h3>
+<p>On the other hand, html within code should be automatically escaped by the converter. So <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code> will never render as a paragraph.</p>
+<h2>Code blocks</h2>
+<p>Two types: inline and block (fences)</p>
+<h3>Fences</h3>
+<p>Code fences are blocks of code with an optional langague type. Here's some JavaScript</p>
+<pre><code class="language-javascript">const x = 5;
+const animal = 'dog';
+let templateString = `There are ${x} dog${x &gt;= 1 ? 's' : ''}`;
+console.log(templateString);
+</code></pre>
+<p> <br>
+ </p>
+<h2>Misc</h2>
+<p>This will help test headings:</p>
+<h3>Comments:</h3>
+<p>(you should not see anything here)</p>
+<h3>Sub-Headings</h3>
+<p>Down the rabbit hole</p>
+<h4>Sub-header A</h4>
+<p>Something piffy</p>
+<h3>Sub-header B</h3>
+<p>How far can we go?</p>
+<h4>Sub 4A</h4>
+<p>This is level 4-A</p>
+<h4>Sub 4B</h4>
+<p>This is level 4-B</p>
+<h5>Sub 5A</h5>
+<p>Tired of finding thigs to write</p>
+<h5>Sub 5B</h5>
+<p>No way I'm going to 6</p>
+<h3>Back to 3</h3>
+<p>Upwards!</p>
+<h2>Then to 2</h2>
+<p>Almost there</p>
+<h1>Finally at the top</h1>
+<p>The end<br>
+ <br>
+ </p>
