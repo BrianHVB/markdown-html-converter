@@ -1,61 +1,141 @@
-<h1>Do some coding thing</h1>
+<h1 id="do-some-coding-thing">Do some coding thing</h1>
 <p>This is a test entry in some fancy markdown.</p>
 <p>Logo and Google Link:<br>
 <a href="httos://google.com"><img src="https://blog.echogy.net/wp-content/uploads/2018/03/1200px-React-icon.svg1_-440x440.png" alt="React Logo"></a></p>
-<h2>Table of Contents</h2>
-<p>${toc}</p>
-<h2>Introduction</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
+<p><ul class="markdownIt-TOC">
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#blank-lines">Blank lines</a></li>
+<li><a href="#escaped-html">Escaped HTML</a>
+<ul>
+<li><a href="#example-1">Example 1:</a></li>
+<li><a href="#example-2">Example 2:</a></li>
+</ul>
+</li>
+<li><a href="#code-blocks">Code blocks</a>
+<ul>
+<li><a href="#inline">Inline</a></li>
+<li><a href="#fences">Fences</a></li>
+</ul>
+</li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#misc">Misc</a>
+<ul>
+<li><a href="#comments">Comments:</a></li>
+<li><a href="#sub-headings">Sub-Headings</a>
+<ul>
+<li><a href="#sub-header-a">Sub-header A</a></li>
+</ul>
+</li>
+<li><a href="#sub-header-b">Sub-header B</a>
+<ul>
+<li><a href="#sub-4a">Sub 4A</a></li>
+<li><a href="#sub-4b">Sub 4B</a>
+<ul>
+<li><a href="#sub-5a">Sub 5A</a></li>
+<li><a href="#sub-5b">Sub 5B</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#back-to-3">Back to 3</a></li>
+</ul>
+</li>
+<li><a href="#then-to-2">Then to 2</a></li>
+</ul>
+</p>
+<h2 id="introduction">Introduction</h2>
 <p>This is a <em>test</em> document for converting markdown to html. Hopefully it will turn into something that let me write blog entries in <strong>markdown</strong> for both my <a href="https://blog.echogy.net">Echogy blog</a> and <a href="https://www.medium.com">Medium</a></p>
-<h2>Whitespace</h2>
-<p>Because Markdown uses HTML style whitespace rules, it is more difficult than it should be to get multiple blank lines between paragraphs. The best way seems to be to add <code>&amp;nbsp;</code> entries to any blank lines. Using this,<br>
+<h2 id="blank-lines">Blank lines</h2>
+<p>Because Markdown uses HTML style whitespace rules, it is more difficult than it should be to get multiple blank lines between paragraphs. The best way seems to be to add <code inline="true" escaped="true" >&amp;nbsp;</code> entries to any blank lines.<br>
+<strong>There should be 2 lines between <code inline="true" escaped="true" >start</code> and <code inline="true" escaped="true" >end</code></strong><br>
+ <br>
+---START---<br>
  <br>
  <br>
-You can skip (2) or more lines.</p>
-<h2>Escaped HTML</h2>
+---END---</p>
+<h2 id="escaped-html">Escaped HTML</h2>
 <p>Here are some HTML tags entered as text blocks. Depending on your settings they may need to be escaped. The following paragraph should contain text representations of the p, a, img, and div tags.</p>
-<h3>Example 1:</h3>
-<p>A &lt;p&gt; tag is for paragrapms and line spacing, while an &lt;a&gt; tag can be used within an &lt;img&gt;, and &lt;div&gt; tags are for everything:</p>
+<h3 id="example-1">Example 1:</h3>
+<p>A &lt;p&gt; tag is for paragraphs and line spacing, while an &lt;a&gt; tag can be used within an &lt;img&gt;, and &lt;div&gt; tags are for everything:</p>
 <ul>
 <li>A &lt;p&gt; tag:</li>
 <li>An &lt;a&gt; tag with an &lt;img&gt; tag.</li>
 <li>Good ol' catchall: &lt;div&gt;</li>
 </ul>
-<h3>Example 2:</h3>
-<p>On the other hand, html within code should be automatically escaped by the converter. So <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code> will never render as a paragraph.</p>
-<h2>Code blocks</h2>
+<h3 id="example-2">Example 2:</h3>
+<p>On the other hand, html within code should be automatically escaped by the converter. So <code inline="true" escaped="true" >&lt;p&gt;This is a paragraph&lt;/p&gt;</code> will never render as a paragraph.</p>
+<h2 id="code-blocks">Code blocks</h2>
 <p>Two types: inline and block (fences)</p>
-<h3>Fences</h3>
+<h3 id="inline">Inline</h3>
+<p>Code <code inline="true" escaped="true" >that is inline will appear in monospaced font</code>. It won't cause any line breaks and should look nice.</p>
+<h3 id="fences">Fences</h3>
 <p>Code fences are blocks of code with an optional langague type. Here's some JavaScript</p>
-<pre><code class="language-javascript">const x = 5;
+<code  escaped="true" lang=javascript>const x = 5;
 const animal = 'dog';
 let templateString = `There are ${x} dog${x &gt;= 1 ? 's' : ''}`;
+
+for (let i = 1; i &lt; 14; i++) {
+	let long_str = `
+	  This is a multi-line string.
+	  It tests that the line numbers are working
+	  And that backticks in markdown are properly escaping
+	`
+	
+	if (x &lt; i) {
+		continue;
+	}
+	
+	let xx = x + 3;
+}
 console.log(templateString);
-</code></pre>
-<p> <br>
- </p>
-<h2>Misc</h2>
+</code><h1 id=""></h1>
+<h2 id="tables">Tables</h2>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th style="text-align:center">Column 2</th>
+<th style="text-align:right">Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This is the first test</td>
+<td style="text-align:center">no proper spacing</td>
+<td style="text-align:right">wtf?</td>
+</tr>
+<tr>
+<td>Row 2</td>
+<td style="text-align:center">is short</td>
+<td style="text-align:right">yup</td>
+</tr>
+</tbody>
+</table>
+<h2 id="misc">Misc</h2>
 <p>This will help test headings:</p>
-<h3>Comments:</h3>
+<h3 id="comments">Comments:</h3>
 <p>(you should not see anything here)</p>
-<h3>Sub-Headings</h3>
+<h3 id="sub-headings">Sub-Headings</h3>
 <p>Down the rabbit hole</p>
-<h4>Sub-header A</h4>
+<h4 id="sub-header-a">Sub-header A</h4>
 <p>Something piffy</p>
-<h3>Sub-header B</h3>
+<h3 id="sub-header-b">Sub-header B</h3>
 <p>How far can we go?</p>
-<h4>Sub 4A</h4>
+<h4 id="sub-4a">Sub 4A</h4>
 <p>This is level 4-A</p>
-<h4>Sub 4B</h4>
+<h4 id="sub-4b">Sub 4B</h4>
 <p>This is level 4-B</p>
-<h5>Sub 5A</h5>
+<h5 id="sub-5a">Sub 5A</h5>
 <p>Tired of finding thigs to write</p>
-<h5>Sub 5B</h5>
+<h5 id="sub-5b">Sub 5B</h5>
 <p>No way I'm going to 6</p>
-<h3>Back to 3</h3>
+<h3 id="back-to-3">Back to 3</h3>
 <p>Upwards!</p>
-<h2>Then to 2</h2>
+<h2 id="then-to-2">Then to 2</h2>
 <p>Almost there</p>
-<h1>Finally at the top</h1>
+<h1 id="finally-at-the-top">Finally at the top</h1>
 <p>The end<br>
  <br>
  </p>

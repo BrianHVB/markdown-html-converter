@@ -5,22 +5,25 @@ Logo and Google Link:
 [![React Logo][logo]][Google]
 
 ## Table of Contents
-${toc}
+@[toc]
 
 ## Introduction
 This is a *test* document for converting markdown to html. Hopefully it will turn into something that let me write blog entries in __markdown__ for both my [Echogy blog] and [Medium]
 
-## Whitespace
-Because Markdown uses HTML style whitespace rules, it is more difficult than it should be to get multiple blank lines between paragraphs. The best way seems to be to add `&nbsp;` entries to any blank lines. Using this,
+## Blank lines
+Because Markdown uses HTML style whitespace rules, it is more difficult than it should be to get multiple blank lines between paragraphs. The best way seems to be to add `&nbsp;` entries to any blank lines.
+**There should be 2 lines between `start` and `end`**
+&nbsp;
+---START---
 &nbsp;
 &nbsp;
-You can skip (2) or more lines.
+---END---
 
 ## Escaped HTML
 Here are some HTML tags entered as text blocks. Depending on your settings they may need to be escaped. The following paragraph should contain text representations of the p, a, img, and div tags.
 
 ### Example 1:
-A <p> tag is for paragrapms and line spacing, while an <a> tag can be used within an <img>, and <div> tags are for everything:
+A <p> tag is for paragraphs and line spacing, while an <a> tag can be used within an <img>, and <div> tags are for everything:
 
 * A <p> tag:
 * An <a> tag with an <img> tag.
@@ -32,6 +35,9 @@ On the other hand, html within code should be automatically escaped by the conve
 ## Code blocks
 Two types: inline and block (fences)
 
+### Inline
+Code `that is inline will appear in monospaced font`. It won't cause any line breaks and should look nice.
+
 ### Fences
 Code fences are blocks of code with an optional langague type. Here's some JavaScript
 
@@ -39,10 +45,30 @@ Code fences are blocks of code with an optional langague type. Here's some JavaS
 const x = 5;
 const animal = 'dog';
 let templateString = `There are ${x} dog${x >= 1 ? 's' : ''}`;
+
+for (let i = 1; i < 14; i++) {
+	let long_str = `
+	  This is a multi-line string.
+	  It tests that the line numbers are working
+	  And that backticks in markdown are properly escaping
+	`
+	
+	if (x < i) {
+		continue;
+	}
+	
+	let xx = x + 3;
+}
 console.log(templateString);
 ```
-&nbsp;
-&nbsp;
+
+#  
+## Tables
+| Column 1 | Column 2 | Column 3 |
+|----------|:--------:|---------:|
+| This is the first test |no proper spacing | wtf? |
+| Row 2 | is short | yup |
+
 ## Misc
 This will help test headings:
 
